@@ -1,8 +1,8 @@
 import uuid
-from itertools import product
 from django.db import models
 
 
+# Category model definition, attributes and types
 class Category(models.Model):
     categoryId = models.UUIDField(
         primary_key=True, default=uuid.uuid4, editable=False, unique=True
