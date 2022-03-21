@@ -10,5 +10,4 @@ from .providerView import (
     ProviderListCreateView,
     ProviderRetrieveUpdateDestroyView,
 )
-from .userView import UserListCreateView, UserRetrieveUpdateDestroyView
-from .userTypeView import UserTypeListCreateView, UserTypeRetrieveUpdateDestroyView
+from .userView import UserCreateView, UserDetailView
