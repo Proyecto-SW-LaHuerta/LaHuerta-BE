@@ -11,9 +11,9 @@ class Category(models.Model):
         null=False,
         max_length=30,
         choices=(
-            ("N", "Nacional"),
-            ("I", "Importado"),
-            ("V", "Verduras_Hortalizas"),
+            ("Nacional", "Nacional"),
+            ("Importado", "Importado"),
+            ("Verduras_Hortalizas", "Verduras_Hortalizas"),
         ),
     )
     quantity = models.IntegerField(null=False)

@@ -1,11 +1,11 @@
 import uuid
 from django.db import models
-from authApp.models.paymentType import PaymentType
-from .user import User
 from .product import Product
 from .paymentType import PaymentType
+from .user import User
 
 
+# Bill model definition, attributes and types
 class Bill(models.Model):
     billId = models.UUIDField(
         primary_key=True, default=uuid.uuid4, editable=False, unique=True

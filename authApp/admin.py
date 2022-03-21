@@ -6,7 +6,6 @@ from .models.paymentType import PaymentType
 from .models.product import Product
 from .models.provider import Provider
 from .models.user import User
-from .models.userType import UserType
 
 
 class BillAdmin(admin.ModelAdmin):
@@ -88,24 +87,14 @@ class ProviderAdmin(admin.ModelAdmin):
 class UserAdmin(admin.ModelAdmin):
     list_per_page = 20
     list_display = (
-        "userId",
         "firstName",
         "lastName",
         "phoneNumber",
+        "email",
         "birthday",
     )
     search_fields = ["firstName", "lastName"]
-    list_filter = ("birthday", "phoneNumber")
-
-
-class UserTypeAdmin(admin.ModelAdmin):
-    list_per_page = 20
-    list_display = (
-        "userTypeId",
-        "userType",
-    )
-    search_fields = ["userTypeId", "userType"]
-    list_filter = ("userTypeId", "userType")
+    list_filter = ("phoneNumber", "birthday")
 
 
 admin.site.register(Bill, BillAdmin)
@@ -115,4 +104,3 @@ admin.site.register(PaymentType, PaymentTypeAdmin)
 admin.site.register(Product, ProductAdmin)
 admin.site.register(Provider, ProviderAdmin)
 admin.site.register(User, UserAdmin)
-admin.site.register(UserType, UserTypeAdmin)
