@@ -1,8 +1,8 @@
 import uuid
 from django.db import models
-from .user import User
 from .product import Product
 from .paymentType import PaymentType
+from .user import User
 
 
 # Bill model definition, attributes and types

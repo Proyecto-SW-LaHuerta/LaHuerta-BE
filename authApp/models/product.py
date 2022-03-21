@@ -1,7 +1,8 @@
+from email.policy import default
 import uuid
 from django.db import models
 from .category import Category
-
+from authProject.settings import MEDIA_URL, STATIC_URL
 
 class Product(models.Model):
     productId = models.UUIDField(
@@ -17,3 +18,4 @@ class Product(models.Model):
         on_delete=models.SET_NULL,
         null=True,
     )
+    picture = models.ImageField(default="", blank='')
